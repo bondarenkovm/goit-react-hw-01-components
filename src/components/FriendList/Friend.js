@@ -1,12 +1,13 @@
 import PropTypes from 'prop-types';
+import css from './Friend.module.css';
 
 export default function Friend({ avatar, name, status }) {
   return (
-    <div>
-      <span class="status"></span>
-      <img class="avatar" src={avatar} alt={name} width="48" />
-      <p class="name">{name}</p>
-    </div>
+    <>
+      <span className={status ? css.online : css.offline}></span>
+      <img className={css.avatar} src={avatar} alt={name} width="48" />
+      <p className={css.name}>{name}</p>
+    </>
   );
 }
 
