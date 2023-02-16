@@ -4,6 +4,7 @@ import css from './Friend.module.css';
 export default function Friend({ avatar, name, status }) {
   return (
     <>
+      {/* <span className={`${css.status} ${css[status]}`}></span> */}
       <span className={status ? css.online : css.offline}></span>
       <img className={css.avatar} src={avatar} alt={name} width="48" />
       <p className={css.name}>{name}</p>
